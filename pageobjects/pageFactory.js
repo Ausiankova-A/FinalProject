@@ -1,42 +1,51 @@
 const {
-    Search
+  Search,
 } = require('./pageComponents/search');
 const {
-    ItemPage
+  ItemPage,
 } = require('./itemPage');
 const {
-    LeftNavBar
+  LeftNavBar,
 } = require('./leftNavigationBar');
 const {
-    SectionPage
+  SectionPage,
 } = require('./sectionPage');
 const {
-    BooksSection
+  BooksSection,
 } = require('./booksSection');
 const {
-    LoginPage
+  LoginPage,
 } = require('./pageComponents/login');
 const {
-    PersonalAccount
+  PersonalAccount,
 } = require('./pageComponents/personalAccount');
 const {
-    Cart
+  Cart,
 } = require('./pageComponents/cart');
 const {
-    MainPage
+  MainPage,
 } = require('./mainPage');
+
 class PageFactory {
-    static 'Search' = new Search();
-    static 'Item Page' = new ItemPage();
-    static 'Left Navigation Bar' = new LeftNavBar();
-    static 'Section Page' = new SectionPage();
-    static 'Books Section' = new BooksSection();
-    static 'Login Page' = new LoginPage();
-    static 'Personal Account' = new PersonalAccount();
-    static 'Cart' = new Cart();
-    static 'Main Page' = new MainPage();
+  static 'Search' = new Search();
+
+  static 'Item Page' = new ItemPage();
+
+  static 'Left Navigation Bar' = new LeftNavBar();
+
+  static 'Section Page' = new SectionPage();
+
+  static 'Books Section' = new BooksSection();
+
+  static 'Login Page' = new LoginPage();
+
+  static 'Personal Account' = new PersonalAccount();
+
+  static 'Cart' = new Cart();
+
+  static 'Main Page' = new MainPage();
 }
 
 module.exports = {
-    PageFactory
+  PageFactory,
 };

@@ -31,7 +31,16 @@ Feature: Testing Cart for "Oz" website
         And I click on "Cart > Cart Button" button
         And I login to application
         And I click on "Cart > Checkout Button" button
-        Then I expect element "Cart > Name Surname Error Message" is equal to "Необходимо ввести фамилию, имя, отчество Введите фамилию, имя и отчество"
+        Then I expect element "Cart > Name Surname Error Message" is equal to "Необходимо ввести фамилию, имя, отчество"
+
+    Scenario: As a user, I get correct error message when I want to checkout without filling all required fields
+        When I search by phrase "Атлант расправил плечи"
+        And I click on "Search > First Search Result" button
+        And I put item "Item Page > Add To Cart Button" to the cart
+        And I click on "Cart > Cart Button" button
+        And I login to application
+        And I click on "Cart > Checkout Button" button
+        Then I expect element "Cart > Checkout Error Message" is equal to "Данный способ оплаты недоступен"
 
     Scenario: As a user, I can add my Name and Surname for delivery
         When I search by phrase "бядуля"

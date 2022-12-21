@@ -3,3 +3,4 @@ allure-results
 .tmp
 cucumber_report
 reports
+package-lock.json
